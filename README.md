@@ -1,2 +1,2 @@
 # learngo
-nomardcoder의 go강의를 학습
+이 저장소는 노마드코더의 go 강의를 학습한 코드를 업로드됩니다.
