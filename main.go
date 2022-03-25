@@ -9,4 +9,7 @@ import (
 func main() {
 	fmt.Println("Hello world")
 	something.SayHello()
+	var name string = "jaewoo"
+	name = "nico"
+	fmt.Println(name)
 }
