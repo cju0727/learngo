@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 // 자료형 지정1
@@ -27,10 +28,23 @@ import (
 
 // 자료형 지정3
 
-func repeatMe(words ...string) {
-	fmt.Println(words)
+// func repeatMe(words ...string) {
+// 	fmt.Println(words)
+// }
+
+// func main() {
+// 	repeatMe("nico", "lynn", "dal", "marl", "flynn")
+// }
+
+// Naked return, defer
+func lenAndUpper(name string) (length int, uppercase string) {
+	defer fmt.Println("I'm done")
+	length = len(name)
+	uppercase = strings.ToUpper(name)
+	return
 }
 
 func main() {
-	repeatMe("nico", "lynn", "dal", "marl", "flynn")
+	totalLenght, up := lenAndUpper("nico")
+	fmt.Println(totalLenght, up)
 }
