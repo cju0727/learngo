@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 // 자료형 지정1
@@ -37,14 +36,28 @@ import (
 // }
 
 // Naked return, defer
-func lenAndUpper(name string) (length int, uppercase string) {
-	defer fmt.Println("I'm done")
-	length = len(name)
-	uppercase = strings.ToUpper(name)
-	return
+// func lenAndUpper(name string) (length int, uppercase string) {
+// 	defer fmt.Println("I'm done")
+// 	length = len(name)
+// 	uppercase = strings.ToUpper(name)
+// 	return
+// }
+
+// func main() {
+// 	totalLenght, up := lenAndUpper("nico")
+// 	fmt.Println(totalLenght, up)
+// }
+
+func superAdd(numbers ...int) int {
+	total := 0
+	for _, number := range numbers {
+		total += number
+		// fmt.Println(index, number)
+	}
+	return total
 }
 
 func main() {
-	totalLenght, up := lenAndUpper("nico")
-	fmt.Println(totalLenght, up)
+	result := superAdd(1, 2, 3, 4, 5, 6)
+	fmt.Println(result)
 }
