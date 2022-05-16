@@ -3,10 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	str := "Hello 월드!"
-	for _, v := range str {
-		fmt.Printf(" 타입:%T 값:%d 문자:%c\n", v, v, v)
-	}
+	str1 := "Hello"
+	str2 := "World"
+
+	str3 := str1 + " " + str2
+	fmt.Println(str3)
+
+	str1 += " " + str2
+	fmt.Println((str1))
+	/*
+		str := "Hello 월드!"
+		for _, v := range str {
+			fmt.Printf(" 타입:%T 값:%d 문자:%c\n", v, v, v)
+		}
+	*/
 	/* []rune을 이용한 문자열 순회
 	str := "Hello 월드!"
 	arr := []rune(str)
